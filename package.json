@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "SniperHerz",
+  "author": "ZenonRad",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.22.0"

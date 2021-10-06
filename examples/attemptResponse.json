@@ -1,0 +1,46 @@
+{
+    "code": 200,
+    "message": "OK",
+    "data": {
+      "isSuccess": true,
+      "testResults": {
+        "test1": { "isOk": true, "expectedResult": 8 },
+        "test2": { "isOk": true, "expectedResult": 64 },
+        "test3": { "isOk": true, "expectedResult": -3.375 },
+        "test4": { "isOk": true, "expectedResult": -1728 },
+        "test5": { "isOk": true, "expectedResult": 1 },
+        "rnd_kmd_Jadon": { "isOk": true, "expectedResult": 274625 },
+        "rnd_vie_Roslyn": { "isOk": true, "expectedResult": 9261 },
+        "rnd_wxx_Mathew": { "isOk": true, "expectedResult": 9261 }
+      },
+      "totalPoints": 5,
+      "nextTask": {
+        "id": 107,
+        "lang": "js",
+        "slug": "multiplierCount",
+        "code": "box.multiplierCount = function multiplierCount(x, y) {\n  // x and y are numbers\n  // return a number\n  // (ex. x=10, y=5, you should return 2)\n  // (ex. x=11, y=2, you should return 5)\n  \n};",
+        "cursor_row": 5,
+        "cursor_column": 4,
+        "tests_json": {
+          "test1": { "args": [6, 2], "result": 3 },
+          "test2": { "args": [100, 1], "result": 100 },
+          "test3": { "args": [90, 55], "result": 1 },
+          "test4": { "args": [40, 3], "result": 13 },
+          "rnd_dhc_Greyson": { "args": [744, 350] },
+          "rnd_wbb_Florine": { "args": [605, 456] },
+          "rnd_bjl_John": { "args": [554, 12] }
+        },
+        "title": "multiplierCount",
+        "points": 10,
+        "public_description": "Given x and y are numbers, \n\nhow many times can you multiply y and keep it lower than or equal to x?"
+      },
+      "attemptId": 9448182,
+      "isChallengeEntryFinished": false,
+      "entryMeta": {
+        "penalized_by_cooldown_sec": false,
+        "current_task_ind": 1,
+        "tasks_state": "+______________________________"
+      }
+    }
+  }
+  
