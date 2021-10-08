@@ -2,7 +2,7 @@ import React from "react";
 
 import logo from "./logo.svg";
 import "./App.css";
-// import fetch from "./services/fetch";
+import { requestToptal } from "./services/request";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            // fetch();
+            requestToptal();
           }}
         >
           Learn React
