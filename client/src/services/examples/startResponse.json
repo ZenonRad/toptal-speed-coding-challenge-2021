@@ -1,52 +1,51 @@
 {
-    "code": 200,
-    "message": "OK",
-    "data": {
-      "entry": {
-        "id": 559418,
-        "challenge_id": 29,
-        "date_created": "",
-        "email": "",
-        "leaderboard_name": "ZenonRad",
-        "entry_key": "7e17107ffdd84533f8b31d00e2cd95c2c51a65f3eaefcd1d3b7a74ee2475",
-        "is_removed": "",
-        "total_points": 0,
-        "form_response_json": "",
-        "form_spec_json": "",
-        "date_stop": "2021-10-06 19:50:19.832317+00",
-        "is_confirmed_to_be_contacted": "",
-        "confirm_to_be_contacted_text": "",
-        "is_test": "",
-        "country_alpha2_upcase": "MG",
-        "skipped_task_ids": "{}"
+  "code": 200,
+  "message": "OK",
+  "data": {
+    "entry": {
+      "id": 559418,
+      "challenge_id": 29,
+      "date_created": "",
+      "email": "",
+      "leaderboard_name": "ZenonRad",
+      "entry_key": "7e17107ffdd84533f8b31d00e2cd95c2c51a65f3eaefcd1d3b7a74ee2475",
+      "is_removed": "",
+      "total_points": 0,
+      "form_response_json": "",
+      "form_spec_json": "",
+      "date_stop": "2021-10-06 19:50:19.832317+00",
+      "is_confirmed_to_be_contacted": "",
+      "confirm_to_be_contacted_text": "",
+      "is_test": "",
+      "country_alpha2_upcase": "MG",
+      "skipped_task_ids": "{}"
+    },
+    "entryMeta": {
+      "penalized_by_cooldown_sec": false,
+      "current_task_ind": 0,
+      "tasks_state": "_______________________________"
+    },
+    "nextTask": {
+      "id": 124,
+      "lang": "js",
+      "slug": "cube",
+      "code": "box.cube = function cube (x) {\n  // x is a number\n  // return x cubed\n  // (ex. x=3, return 27)\n  \n};",
+      "cursor_row": 4,
+      "cursor_column": 4,
+      "tests_json": {
+        "test1": { "args": [2], "result": 8 },
+        "test2": { "args": [4], "result": 64 },
+        "test3": { "args": [-1.5], "result": -3.375 },
+        "test4": { "args": [-12], "result": -1728 },
+        "test5": { "args": [1], "result": 1 },
+        "rnd_kii_Jan": { "args": [80] },
+        "rnd_zeu_Emerson": { "args": [-24] },
+        "rnd_wps_Declan": { "args": [37] }
       },
-      "entryMeta": {
-        "penalized_by_cooldown_sec": false,
-        "current_task_ind": 0,
-        "tasks_state": "_______________________________"
-      },
-      "nextTask": {
-        "id": 124,
-        "lang": "js",
-        "slug": "cube",
-        "code": "box.cube = function cube (x) {\n  // x is a number\n  // return x cubed\n  // (ex. x=3, return 27)\n  \n};",
-        "cursor_row": 4,
-        "cursor_column": 4,
-        "tests_json": {
-          "test1": { "args": [2], "result": 8 },
-          "test2": { "args": [4], "result": 64 },
-          "test3": { "args": [-1.5], "result": -3.375 },
-          "test4": { "args": [-12], "result": -1728 },
-          "test5": { "args": [1], "result": 1 },
-          "rnd_kii_Jan": { "args": [80] },
-          "rnd_zeu_Emerson": { "args": [-24] },
-          "rnd_wps_Declan": { "args": [37] }
-        },
-        "title": "Cube",
-        "points": 5,
-        "public_description": "Given x is a number,\n\nreturn x cubed."
-      },
-      "attemptId": 9446950
-    }
+      "title": "Cube",
+      "points": 5,
+      "public_description": "Given x is a number,\n\nreturn x cubed."
+    },
+    "attemptId": 9446950
   }
-  
+}

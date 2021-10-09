@@ -1,32 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import Grid from "@mui/material/Grid";
+import { styled } from "@mui/system";
 
-import logo from "./logo.svg";
-import "./App.css";
-import { requestToptal } from "./services/request";
+import Start from "./pages/Start";
+import Challenge from "./pages/Challenge";
+import { Session, Task } from "./types";
+import { GlobalContext } from "./contexts";
+
+const Root = styled(Grid)({
+  width: "100vw",
+  height: "100vh",
+});
 
 function App() {
+  const [session, setSession] = useState<Session | undefined>();
+  const [task, setTask] = useState<Task | undefined>();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            requestToptal();
-          }}
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Root container justifyContent="center" alignItems="center">
+      <GlobalContext.Provider value={{ session, task, setSession, setTask }}>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/start">
+              <Start />
+            </Route>
+            <Route path="/challenge">
+              <Challenge />
+            </Route>
+            <Redirect to="/start" />
+          </Switch>
+        </BrowserRouter>
+      </GlobalContext.Provider>
+    </Root>
   );
 }
 

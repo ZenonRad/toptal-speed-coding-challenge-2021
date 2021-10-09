@@ -10,5 +10,5 @@ box.firstUniqueChar = function firstUniqueChar(x) {
     if (count[char] === 1) return char;
   }
 
-  return -1;
+  return false;
 };

@@ -11,7 +11,7 @@ box.romanToInt = function romanToInt(x) {
 
   let n = 0;
 
-  for (i = 0; i < x.length; i++) {
+  for (let i = 0; i < x.length; i++) {
     const ci = map[x[i]];
 
     if (i + 1 < x.length) {

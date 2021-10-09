@@ -4,7 +4,7 @@ box.averageAsciiChar = function averageAsciiChar(x) {
       x
         .split("")
         .map((c) => c.charCodeAt(0))
-        .reduce((s, n) => s + n, 0) / x.length
-    )
+        .reduce((s, n) => s + n, 0) / (x.length || 1),
+    ),
   );
 };

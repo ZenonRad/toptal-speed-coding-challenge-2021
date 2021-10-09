@@ -1,5 +1,5 @@
 box.hashPassword = function hashPassword(password, x) {
-  const oneCode = "1".charCodeAt(0);
+  const oneCode = "0".charCodeAt(0);
   const upperACode = "A".charCodeAt(0);
   const lowerACode = "a".charCodeAt(0);
   const diff = lowerACode - upperACode;

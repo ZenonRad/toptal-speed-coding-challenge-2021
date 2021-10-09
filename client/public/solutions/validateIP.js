@@ -4,8 +4,9 @@ box.validateIP = function validateIP(x) {
 
   try {
     return arr.every((str) => {
-      const n = Number(str);
-      return !Number.isNaN(n) && n >= 0 && n <= 255;
+      if (!/^\d+$/.test(str)) return false;
+      const n = parseInt(str, 10);
+      return !Number.isNaN(n) && n >= 0 && n <= 255 && String(n) === str;
     });
   } catch {
     return false;
