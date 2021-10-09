@@ -1,10 +1,10 @@
 box.averageAsciiChar = function averageAsciiChar(x) {
-  return String.fromCharCode(
-    Math.round(
-      x
-        .split("")
-        .map((c) => c.charCodeAt(0))
-        .reduce((s, n) => s + n, 0) / (x.length || 1),
-    ),
-  );
+  const len = x.length;
+  let sum = 0;
+
+  for (let i = 0; i < len; i++) {
+    sum += x[i].charCodeAt(0);
+  }
+
+  return String.fromCharCode(Math.round(sum / len));
 };

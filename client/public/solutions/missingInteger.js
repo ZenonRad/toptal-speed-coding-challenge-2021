@@ -5,9 +5,17 @@ box.missingInteger = function missingInteger(x) {
 
   if (x.length === 0) return 1;
 
+  const len = x.length;
+  let min = Number.MAX_VALUE;
+  let max = 0;
+
+  for (let i = 0; i < len; i++) {
+    const v = x[i];
+    if (min > v) min = v;
+    if (max < v) max = v;
+  }
+
   const found = new Set(x);
-  const min = Math.min(...x);
-  const max = Math.max(...x);
   let i = min;
 
   for (; i <= max; i++) if (!found.has(i)) return i;

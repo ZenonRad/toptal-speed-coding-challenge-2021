@@ -1,3 +1,10 @@
 box.getHalfArray = function getHalfArray(x) {
-  return x.slice(0, Math.ceil(x.length / 2));
+  const halfLen = Math.ceil(x.length / 2);
+  const result = [];
+
+  for (let i = 0; i < halfLen; i++) {
+    result.push(x[i]);
+  }
+
+  return result;
 };

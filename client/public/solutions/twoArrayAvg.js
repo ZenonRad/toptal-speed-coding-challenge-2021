@@ -1,4 +1,13 @@
 box.twoArrayAvg = function twoArrayAvg(x, y) {
-  const avg = (arr) => arr.reduce((s, n) => s + n, 0) / (arr.length || 1);
+  const avg = (arr) => {
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+
+    return sum / (arr.length || 1);
+  };
+
   return avg([avg(x), avg(y)]);
 };

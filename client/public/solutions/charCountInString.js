@@ -1,3 +1,5 @@
 box.charCountInString = function charCountInString(x, y) {
-  return y.split(x).length - 1;
+  let n = 0;
+  for (let i = 0; i < y.length; i++) if (y[i] === x) n++;
+  return n;
 };

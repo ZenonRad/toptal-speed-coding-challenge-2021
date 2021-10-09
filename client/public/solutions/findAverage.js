@@ -1,3 +1,8 @@
 box.findAverage = function findAverage(x) {
-  return Math.ceil(x.reduce((s, c) => s + c, 0) / x.length);
+  let len = x.length;
+  if (len === 0) return 0;
+
+  let sum = 0;
+  for (let i = 0; i < len; i++) sum += x[i];
+  return Math.ceil(sum / len);
 };
