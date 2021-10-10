@@ -7,6 +7,8 @@ import {
 import { evalSolution, loadSolution, request } from "./helpers";
 
 (async () => {
+  /* -------------------- Starting -------------------- */
+
   const startPayload: Record<string, string> = {
     challengeSlug: "toptal-js-2021",
     email: "",
@@ -37,13 +39,17 @@ import { evalSolution, loadSolution, request } from "./helpers";
     return;
   }
 
+  /* ++++++++++++++++++++ Starting ++++++++++++++++++++ */
+
   const attemptPath = `/${entryId}/attemptTask`;
+  console.time("solving");
 
   const solve = async (prevData: ResponseData & { totalPoints?: number }) => {
     if (!prevData.nextTask) {
       console.info(
         `\n🎉 Challenge completed ! Final score: ${prevData.totalPoints ?? 0}`
       );
+      console.timeEnd("solving");
 
       return;
     }
@@ -52,6 +58,7 @@ import { evalSolution, loadSolution, request } from "./helpers";
     const { slug, title, tests_json } = prevData.nextTask;
 
     console.info(`\nSolving ${title}...`);
+    console.time(slug);
 
     const code = loadSolution(slug);
     const results: Record<string, any> = {};
@@ -79,6 +86,7 @@ import { evalSolution, loadSolution, request } from "./helpers";
     }
 
     console.info(`✅ Task ${title} passed ! Current score: ${totalPoints}`);
+    console.timeEnd(slug);
 
     solve(attemptData);
   };

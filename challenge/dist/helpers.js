@@ -43,7 +43,6 @@ const toUrlEncoded = (data) => Object.keys(data)
     .join("&");
 const request = (path, data) => __awaiter(void 0, void 0, void 0, function* () {
     const urlEncoded = toUrlEncoded(data);
-    console.log({ urlEncoded });
     return axios_1.default.post(`${baseUrl}${path}`, urlEncoded, {
         headers: {
             accept: "*/*",

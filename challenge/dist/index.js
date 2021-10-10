@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const helpers_1 = require("./helpers");
 (() => __awaiter(void 0, void 0, void 0, function* () {
+    /* -------------------- Starting -------------------- */
     const startPayload = {
         challengeSlug: "toptal-js-2021",
         email: "",
@@ -30,16 +31,20 @@ const helpers_1 = require("./helpers");
         console.error(`Toptal response: ${code} status code !`);
         return;
     }
+    /* ++++++++++++++++++++ Starting ++++++++++++++++++++ */
     const attemptPath = `/${entryId}/attemptTask`;
+    console.time("solving");
     const solve = (prevData) => __awaiter(void 0, void 0, void 0, function* () {
         var _a;
         if (!prevData.nextTask) {
             console.info(`\n🎉 Challenge completed ! Final score: ${(_a = prevData.totalPoints) !== null && _a !== void 0 ? _a : 0}`);
+            console.timeEnd("solving");
             return;
         }
         const { attemptId } = prevData;
         const { slug, title, tests_json } = prevData.nextTask;
         console.info(`\nSolving ${title}...`);
+        console.time(slug);
         const code = (0, helpers_1.loadSolution)(slug);
         const results = {};
         for (const [key, { args }] of Object.entries(tests_json)) {
@@ -58,6 +63,7 @@ const helpers_1 = require("./helpers");
             console.error(JSON.stringify(testResults));
         }
         console.info(`✅ Task ${title} passed ! Current score: ${totalPoints}`);
+        console.timeEnd(slug);
         solve(attemptData);
     });
     solve(startData);
