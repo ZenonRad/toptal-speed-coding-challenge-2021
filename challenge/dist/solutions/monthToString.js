@@ -1,5 +1,5 @@
 box.monthToString = function monthToString(x) {
-  const months = [
+  return [
     "Jan",
     "Feb",
     "Mar",
@@ -12,7 +12,5 @@ box.monthToString = function monthToString(x) {
     "Oct",
     "Nov",
     "Dec",
-  ];
-
-  return months[x - 1];
+  ][x - 1];
 };

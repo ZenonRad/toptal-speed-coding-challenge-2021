@@ -1,3 +1,15 @@
 box.countUniqueNumbers = function countUniqueNumbers(x) {
-  return new Set(x).size;
+  const exist = {};
+  let n = 0;
+
+  for (let i = 0; i < x.length; i++) {
+    const item = x[i];
+
+    if (!exist[item]) {
+      exist[item] = 1;
+      n++;
+    }
+  }
+
+  return n;
 };

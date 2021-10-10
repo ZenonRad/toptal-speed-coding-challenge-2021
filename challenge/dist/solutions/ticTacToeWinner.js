@@ -1,32 +1,15 @@
 box.ticTacToeWinner = function ticTacToeWinner(matrix) {
-  // x is an array that includes 3 child arrays, every child represents a row of a tic tac toe matrix
-  // return 'x', 'o', or 'draw'
-  // (ex. x=[["x", "o", "x"], ["o", "x", "o"], ["o", "o", "x"]],
-  // you should return 'x' because 'x' player is the winner)
-
   const size = matrix.length;
-  const x = "x";
-  const o = "o";
 
   let score = {
-    [x]: {
-      row: {},
-      column: {},
-      dialog: 0,
-      antiDialog: 0,
-    },
-    [o]: {
-      row: {},
-      column: {},
-      dialog: 0,
-      antiDialog: 0,
-    },
+    x: { row: {}, column: {}, dialog: 0, antiDialog: 0 },
+    o: { row: {}, column: {}, dialog: 0, antiDialog: 0 },
   };
 
-  const win = { [x]: false, [o]: false };
+  const win = { x: false, o: false };
 
-  const inc = (obj, index) => {
-    obj[index] = obj[index] ? obj[index] + 1 : 1;
+  const inc = (obj, i) => {
+    obj[i] = obj[i] ? obj[i] + 1 : 1;
   };
 
   for (let i = 0; i < size; i++) {
@@ -36,7 +19,6 @@ box.ticTacToeWinner = function ticTacToeWinner(matrix) {
 
       inc(s.row, i);
       inc(s.column, j);
-
       if (i === j) s.dialog++;
       if (i + j === size - 1) s.antiDialog++;
 
@@ -50,8 +32,8 @@ box.ticTacToeWinner = function ticTacToeWinner(matrix) {
     }
   }
 
-  if (win[x] === true && win[o] === true) return "error";
-  if (win[x]) return x;
-  if (win[o]) return o;
+  if (win.x === true && win.o === true) return "error";
+  if (win.x) return "x";
+  if (win.o) return "o";
   return "draw";
 };

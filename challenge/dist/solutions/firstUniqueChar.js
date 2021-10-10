@@ -1,17 +1,21 @@
 box.firstUniqueChar = function firstUniqueChar(x) {
-  const count = {};
   const len = x.length;
+  const count = {};
+  const keys = [];
 
   for (let i = 0; i < len; i++) {
-    const char = x[i];
-    count[char] = count[char] ? count[char] + 1 : 1;
+    const c = x[i];
+
+    if (count[c]) count[c] = count[c] + 1;
+    else {
+      count[c] = 1;
+      keys.push(c);
+    }
   }
 
-  const keys = Object.keys(count);
-
   for (let i = 0; i < keys.length; i++) {
-    const char = keys[i];
-    if (count[char] === 1) return char;
+    const c = keys[i];
+    if (count[c] === 1) return c;
   }
 
   return false;
