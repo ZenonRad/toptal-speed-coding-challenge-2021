@@ -36,8 +36,6 @@ def start():
     s = requests.Session()
     s.verify = False
 
-    print("Fetching https://speedcoding.toptal.com/webappApi/entry")
-
     response = s.post('https://speedcoding.toptal.com/webappApi/entry',
                       headers=headers, params=params, data=data)
 
@@ -65,18 +63,16 @@ def submit():
     s = requests.Session()
     s.verify = False
 
-    print("\n")
-    print(
-        f'Fetching https://speedcoding.toptal.com/webappApi/entry/{entryId}/attemptTask')
-
-    print(data)
-
     response = s.post(f'https://speedcoding.toptal.com/webappApi/entry/{entryId}/attemptTask',
                       headers=headers, params=params, data=data)
 
-    response_json = response.json()
-
-    print(response_json)
     print("\n")
+    print(response.request.url)
+    print(response.request.headers)
+    print(response.request.body)
+    print(response.request.method)
+    print(response.request.hooks)
+
+    response_json = response.json()
 
     return response_json
