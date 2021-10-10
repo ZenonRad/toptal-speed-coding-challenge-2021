@@ -7,6 +7,8 @@ import {
 import { evalSolution, loadSolution, request } from "./helpers";
 
 (async () => {
+  await new Promise((resolve) => setTimeout(resolve, 10000)); // Sleep
+
   /* -------------------- Starting -------------------- */
 
   const startPayload: Record<string, string> = {
