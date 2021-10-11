@@ -576,7 +576,7 @@ solutions = {
 
 
 headers = {
-    'cookie': 'PHPSESSID=f1c31811e373b752502dbdcaec1a8cbf',
+    'cookie': '*******************************************',
 }
 
 params = (

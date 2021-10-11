@@ -11,7 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const helpers_1 = require("./helpers");
 (() => __awaiter(void 0, void 0, void 0, function* () {
-    yield new Promise((resolve) => setTimeout(resolve, 10000)); // Sleep
     /* -------------------- Starting -------------------- */
     const startPayload = {
         challengeSlug: "toptal-js-2021",

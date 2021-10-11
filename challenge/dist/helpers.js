@@ -35,7 +35,7 @@ exports.evalSolution = exports.loadSolution = exports.request = void 0;
 const path = __importStar(require("path"));
 const fs_1 = require("fs");
 const axios_1 = __importDefault(require("axios"));
-const cookie = "PHPSESSID=f1c31811e373b752502dbdcaec1a8cbf";
+const cookie = "*******************************************";
 const baseUrl = "https://speedcoding.toptal.com/webappApi/entry";
 const params = { ch: "29", acc: "5755" };
 const toUrlEncoded = (data) => Object.keys(data)

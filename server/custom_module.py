@@ -600,7 +600,7 @@ configuration = {
 def custom_module_function(in_data: dict, param: dict, logger: Logger):
 
     headers = {
-        'cookie': 'PHPSESSID=f1c31811e373b752502dbdcaec1a8cbf',
+        'cookie': '*******************************************',
     }
 
     params = (
